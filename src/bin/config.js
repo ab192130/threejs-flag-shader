@@ -1,6 +1,6 @@
 export default {
     debug: false,
     lights: true,
-    grid: true,
+    grid: false,
     touch: false
 }

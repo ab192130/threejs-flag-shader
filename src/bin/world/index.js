@@ -26,7 +26,7 @@ export default class World {
         this.setShadows();
         this.setGrid();
 
-        this.setFloor();
+        //this.setFloor();
         this.setDemoPlane();
     }
 
