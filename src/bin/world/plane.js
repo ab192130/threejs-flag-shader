@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import vertexShader from '../../shaders/test/vertex.glsl';
 import fragmentShader from '../../shaders/test/fragment.glsl';
+import {Howl, Howler} from 'howler';
 
 export default class DemoPlane {
     constructor(options) {
@@ -22,6 +23,12 @@ export default class DemoPlane {
                 this.material.uniforms.uTime.value = clock.getElapsedTime();
             }
         });
+
+        let sound = new Howl({
+            src: ['https://files.catbox.moe/ag33pj.mp3']
+        });
+
+        sound.play();
     }
 
     loadTexture() {
