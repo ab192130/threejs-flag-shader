@@ -32,12 +32,12 @@ export default class DemoPlane {
         this.textureLoader = new THREE.TextureLoader();
         const flagTexture = this.textureLoader.load('images/flag.png');
 
-        return new THREE.RawShaderMaterial({
+        return new THREE.ShaderMaterial({
             vertexShader: vertexShader,
             fragmentShader: fragmentShader,
             side: THREE.DoubleSide,
             uniforms: {
-                uFrequency: {value: new THREE.Vector2(10, 5)},
+                uFrequency: {value: new THREE.Vector2(7, 5)},
                 uTime: {value: 0},
                 uTexture: {value: flagTexture}
             }
@@ -45,11 +45,11 @@ export default class DemoPlane {
     }
 
     create() {
-        this.geometry = new THREE.PlaneBufferGeometry(1, 1, 32, 32);
+        this.geometry = new THREE.PlaneBufferGeometry(1.8, 1, 32, 32);
         this.material = this.initMaterial();
         this.mesh = new THREE.Mesh(this.geometry, this.material);
 
-        this.mesh.position.set(0, 0.53, 0);
+        this.mesh.position.set(0, 0, 0);
         this.mesh.rotation.set(0, 0, 0);
 
         this.mesh.castShadow = true;

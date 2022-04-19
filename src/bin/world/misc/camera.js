@@ -22,9 +22,9 @@ export default class Camera {
         );
 
         //this.instance.up.set(0, 0, 1);
-        this.instance.position.x = 0;
-        this.instance.position.y = 3;
-        this.instance.position.z = 4.5;
+        this.instance.position.x = -2;
+        this.instance.position.y = 0;
+        this.instance.position.z = 2;
         this.instance.rotation.x = -0.5;
 
         this.container.add(this.instance);
